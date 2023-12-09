@@ -57,7 +57,7 @@ body {
     position: relative;
     width: 100%;
     justify-content: space-between;
-    height: 100vh;
+    height: auto;
     background: url(images/backgroundImage.png) no-repeat;
     background-position: center;
     background-size: cover;
@@ -218,7 +218,7 @@ body {
 
 .projects-list {
     display: grid;
-    width: 30rem;
+    width: auto;
     grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;

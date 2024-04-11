@@ -1,3 +1,1 @@
-# PortFolio
-
-A website to show about me
+# ethan-portfolio-starter

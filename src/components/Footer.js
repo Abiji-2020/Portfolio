@@ -7,7 +7,9 @@ const Footer = () => {
     
       <footer
       className='
-      w-full
+      w-full 
+      mt-8
+      h-20
       border-t-2 border-solid
       border-dark 
       font-medium

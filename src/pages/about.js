@@ -46,12 +46,12 @@ const about = () => {
       flex w-full flex-col
       items-center justify-center"
       >
-        <Layout className="">
+        <Layout className="pt-0">
           <AnimatedText text="Passion Fuels Purpose!" className="mb-16" />
           <div className="grid w-full grid-cols-8 gap-16 ">
             <div
               className="col-span-3 flex flex-col
-        items-center justify-center
+        items-start justify-center
         "
             >
               <h2
@@ -60,7 +60,7 @@ const about = () => {
               >
                 About Me
               </h2>
-              <p className="font-medium text-justify ml-8 ">
+              <p className="font-medium text-justify  ">
                 🌟 Hi, I'm Abinand P, aspiring computer science engineering
                 student with an unwavering passion for technology, an aspiring
                 interest in DevOps, and a commitment to open source
@@ -69,7 +69,7 @@ const about = () => {
                 springboot, MERN Stack, and Next.js.
               </p>
 
-              <p className="font-medium my-4 text-justify ml-8 ">
+              <p className="font-medium my-4 text-justify  ">
                 <span className="font-bold text-dark/80">
                   🌐 Tech Enthusiast:
                 </span>{" "}
@@ -83,7 +83,7 @@ const about = () => {
                 me of thinking to improve more of the tech.
               </p>
 
-              <p className="font-medium text-justify ml-8">
+              <p className="font-medium text-justify ">
                 <span className="font-bold text-dark/80">
                   {" "}
                   🚀 Aspiring DevOps Learner:

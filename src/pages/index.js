@@ -56,19 +56,21 @@ export default function Home() {
                 "
                   download={true}
                 >
-                  Resume<LinkArrow className="ml-1 w-6" />
+                  Resume
+                  <LinkArrow className="ml-1 w-6" />
                 </Link>
-                <Link href='mailto:abinand0911@gmail.com target={"_blank'
-                className="ml-4 text-lg
+                <Link
+                  href='mailto:abinand0911@gmail.com target={"_blank'
+                  className="ml-4 text-lg
                 font-medium capitalize
-                text-dark underline ">
+                text-dark underline "
+                >
                   contact
                 </Link>
               </div>
             </div>
           </div>
         </Layout>
-       
       </main>
     </>
   );

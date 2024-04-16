@@ -19,7 +19,7 @@ export default function Home() {
               <Image
                 src={profilePic}
                 alt="Abinand P"
-                className="w-full h-auto"
+                className="w-[80%] h-auto"
               />
             </div>
 

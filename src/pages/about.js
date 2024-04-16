@@ -158,6 +158,8 @@ bg-light p-4 "
             </div>
           </div>
           <Skills />
+
+          
         </Layout>
       </main>
     </>

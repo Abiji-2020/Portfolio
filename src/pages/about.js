@@ -7,51 +7,29 @@ import ProfilePic from "../../public/images/profile/developer-pic-2.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
 
+const AnimatedNumber = ({ value }) => {
+  const ref = useRef(null);
 
+  const motionValue = useMotionValue(0);
+  const springValue = useSpring(motionValue, { duration: 3000 });
+  const isInView = useInView(ref, { once: true });
 
-
-
-
-const AnimatedNumber = ({value})=>{
-const ref = useRef(null);
-
-const motionValue = useMotionValue(0);
-const springValue = useSpring(motionValue,{duration: 3000});
-const isInView = useInView(ref,{once: true});
-
-useEffect(()=>{
-    if(isInView){
-        motionValue.set(value);
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(value);
     }
-},[isInView,value,motionValue])
+  }, [isInView, value, motionValue]);
 
-useEffect(()=>{
-    springValue.on("change",(latest)=>{
-        if(ref.current && latest.toFixed(0)<=value){
-            ref.current.textContent = latest.toFixed(0);
-        }
-    })
-},[springValue,value])
+  useEffect(() => {
+    springValue.on("change", (latest) => {
+      if (ref.current && latest.toFixed(0) <= value) {
+        ref.current.textContent = latest.toFixed(0);
+      }
+    });
+  }, [springValue, value]);
 
-    return <span ref={ref}></span>
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  return <span ref={ref}></span>;
+};
 
 const about = () => {
   return (
@@ -143,37 +121,43 @@ bg-light p-4 "
             </div>
 
             <div className="col-span-2 flex flex-col  justify-between">
-                <div className="flex flex-col items-center justify-center"
-                >
-                    <span className="inline-block text-7xl font-bold">
-                        <AnimatedNumber value={3}/>+
-                    </span>
-                    <h2 className="text-2xl font-medium capitalize text-dark/75 ">Projects Completed</h2>
-                </div>
+              <div className="flex flex-col items-center justify-center">
+                <span className="inline-block text-7xl font-bold">
+                  <AnimatedNumber value={3} />+
+                </span>
+                <h2 className="text-2xl font-medium capitalize text-dark/75 ">
+                  Projects Completed
+                </h2>
+              </div>
 
-                <div className="flex flex-col items-center justify-center">
-                    <span className="inline-block text-7xl font-bold">
-                        <AnimatedNumber value={4}/>+
-                    </span>
-                    <h2 className="text-2xl font-medium capitalize text-dark/75 ">Languages Known</h2>
-                </div>
+              <div className="flex flex-col items-center justify-center">
+                <span className="inline-block text-7xl font-bold">
+                  <AnimatedNumber value={4} />+
+                </span>
+                <h2 className="text-2xl font-medium capitalize text-dark/75 ">
+                  Languages Known
+                </h2>
+              </div>
 
-                <div className="flex flex-col items-center justify-center">
-                    <span className="inline-block text-7xl font-bold">
-                        <AnimatedNumber value={10}/>+
-                    </span>
-                    <h2 className="text-2xl font-medium capitalize text-dark/75 ">Certifications</h2>
-                </div>
-                <div className="flex flex-col items-center justify-center">
-                    <span className="inline-block text-7xl font-bold ">
-                        <AnimatedNumber value={1400}/>+
-                        
-                    </span>
-                    <h2 className="text-2xl font-medium capitalize text-dark/75 ">Rating in LeetCode</h2>
-                </div>
+              <div className="flex flex-col items-center justify-center">
+                <span className="inline-block text-7xl font-bold">
+                  <AnimatedNumber value={10} />+
+                </span>
+                <h2 className="text-2xl font-medium capitalize text-dark/75 ">
+                  Certifications
+                </h2>
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <span className="inline-block text-7xl font-bold ">
+                  <AnimatedNumber value={1400} />+
+                </span>
+                <h2 className="text-2xl font-medium capitalize text-dark/75 ">
+                  Rating in LeetCode
+                </h2>
+              </div>
             </div>
           </div>
-          <Skills/>
+          <Skills />
         </Layout>
       </main>
     </>

@@ -8,7 +8,9 @@ const Footer = () => {
       <footer
       className='
       w-full 
-      mt-8
+      dark:bg-dark
+      dark:text-light
+      dark:border-light
       h-20
       border-t-2 border-solid
       border-dark 
@@ -18,6 +20,7 @@ const Footer = () => {
             <span className='ml-[10%]'>{new Date().getFullYear()}&copy; All Rights Reserved.</span>
            <div className='flex items-center mr-[10%]'>
             Build With <span className='text-primary
+            dark:text-primaryDark
             text-3xl px-1'> &#9825;</span> BY &nbsp;<Link href="/" className='underline underline-offset-2'>Abinand</Link>
            </div>
            

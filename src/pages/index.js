@@ -21,6 +21,8 @@ export default function Home() {
                 src={profilePic}
                 alt="Abinand P"
                 className="w-[80%] h-auto"
+                priority={true}
+                sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 50vw"
               />
             </div>
 

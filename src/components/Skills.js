@@ -12,8 +12,8 @@ const Skill = ({ name, x, y }) => {
         cursor-pointer absolute"
       whileHover={{ scale: 1.15 }}
       initial={{ x: 0, y: 0 }}
-      whileInView={{ x: x, y: y }}
-      transition={{ duration: 1.05 }}
+      whileInView={{ x: x, y: y ,transition: { duration: 1.5}}}
+      viewport={{once: true}}
     >
       {name}
     </motion.div>

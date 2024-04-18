@@ -5,7 +5,10 @@ import AnimatedText from '@/components/AnimatedText'
 import Link from 'next/link'
 import Image from 'next/image'
 import { GithubIcon } from '@/components/Icons'
-import project1 from "../../public/images/projects/crypto-screener-cover-image.jpg"
+import Learnative from "../../public/images/projects/Learnative.png"
+import golangmicro  from "../../public/images/projects/Golang.jpg"
+import blockchain from "../../public/images/projects/Blockchain.jpg"
+import threads from "../../public/images/projects/Threads.jpg"
 
 const FeatuedProjct = ({type,title,summary,img,link,github}) =>{
     return(
@@ -97,22 +100,39 @@ const projects = () => {
                     summary="Learnative combines cutting-edge AI technologies with interactive learning experiences, providing students with personalized and efficient study support. Whether you're tackling complex subjects, preparing for exams, or exploring new interests, Learnative is here to enhance your learning journey."
                     link = "https://learnative.vercel.app/"
                     type="Featured Project"
-                    img={project1}
+                    img={Learnative}
                     github="https://github.com/Abiji-2020/DuHacks3.0-Learnative"
                     />
                 </div>
                 <div className='col-span-6'>
                     <Project
-                    title="Learnative"
+                    title="Golang Mircoservices"
                    
-                    link = "https://learnative.vercel.app/"
-                    type="Featured Project"
-                    img={project1}
-                    github="https://github.com/Abiji-2020/DuHacks3.0-Learnative"
+                    link = "https://github.com/Abiji-2020/go-microservice"
+                    type="Project"
+                    img={golangmicro}
+                    github="https://github.com/Abiji-2020/go-microservice"
                     />
                 </div>
                 <div className='col-span-6'>
-                    Project 2
+                <Project
+                title="Blockchain Projects"
+                link = "https://github.com/Abiji-2020/Blockchain-Mini-projects"
+                type = "Mini Project"
+                img = {blockchain}
+                github="https://github.com/Abiji-2020/Blockchain-Mini-projects"
+                />
+                </div>
+                <div className = 'col-span-12 items center '>
+                    <FeatuedProjct
+                    title="Threads clone"
+                    summary="Threads is a social media platform that allows users to share their thoughts, ideas, and opinions. 
+                    Similar to  that to showcase my knowledge of the Next.js framwork, I have created a clone of the threads website."
+                    link = "https://github.com/Abiji-2020/threads_clone"
+                    type="Featured Project"
+                    img={threads}
+                    github="https://github.com/Abiji-2020/threads_clone"
+                    />
                 </div>
 
             </div>

@@ -59,7 +59,7 @@ const NavBar = () => {
   return (
     <header
     className='w-full px-32 py-8 font-medium flex items-center justify-between
-    dark:text-light dark:bg-dark bg-light relative'
+    dark:text-light dark:bg-dark bg-light relative z-10  lg:px-16 md:px-12 sm:px-8'
     >
         <button className='flex-col justify-center  hidden lg:flex
         items-center ' onClick={handleClick} >
@@ -113,7 +113,7 @@ const NavBar = () => {
       {
         isOpen ?  <motion.div
         initial={{scale:0,opacity:0,x:"-50%",y:"-50%"}}
-        animate={{scale:1,opacity:1}}
+        animate={{scale:1,opacity:1}} 
          className='min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
         z-30 bg-dark/85 dark:bg-light/75 rounded-lg backdrop-blur-md py-32'>
  

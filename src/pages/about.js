@@ -48,11 +48,11 @@ const about = () => {
       dark:text-light"
       >
         <Layout className="pt-0">
-          <AnimatedText text="Passion Fuels Purpose!" className="mb-16" />
-          <div className="grid w-full grid-cols-8 gap-16 ">
+          <AnimatedText text="Passion Fuels Purpose!" className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8 md:mb-10" />
+          <div className="grid w-full grid-cols-8 gap-16  sm:gap-8 ">
             <div
-              className="col-span-3 flex flex-col
-        items-start justify-center
+              className="col-span-3 flex flex-col xl:col-span-4
+        items-start justify-center md:order-2
         "
             >
               <h2
@@ -105,15 +105,15 @@ const about = () => {
             </div>
 
             <div
-              className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark
-bg-light p-4  dark:bg-dark dark:border-light"
+              className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark md:order-1
+bg-light p-4  dark:bg-dark dark:border-light xl:col-span-4"
             >
               <div
                 className="absolute
     top-0 -right-3 
     -z-10 w-[102%] h-[103%]
    rounded-[2rem] bg-dark 
-   dark:bg-light
+   dark:bg-light 
    "
               />
               <Image
@@ -125,12 +125,13 @@ bg-light p-4  dark:bg-dark dark:border-light"
               />
             </div>
 
-            <div className="col-span-2 flex flex-col  justify-between">
+            <div className="col-span-2 flex flex-col  justify-between xl:col-span-8 xl:flex-row xl:items-center 
+            md:order-3 md:-ml-4 md:px-0 md:mr-4 md:flex-row">
               <div className="flex flex-col items-center justify-center">
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumber value={3} />+
                 </span>
-                <h2 className="text-2xl font-medium capitalize text-dark/75 dark:text-light/75 ">
+                <h2 className="text-2xl font-medium capitalize text-dark/75 dark:text-light/75 md:mx-3">
                   Projects Completed
                 </h2>
               </div>

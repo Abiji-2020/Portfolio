@@ -43,7 +43,7 @@ const useThemeSwitcher = () => {
       window.localStorage.setItem("theme", "light");
     }
   }, [mode]);
-  return <div></div>;
+  return [mode, setMode];
 };
 
 export default useThemeSwitcher;

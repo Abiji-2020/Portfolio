@@ -5,15 +5,16 @@ import Link from "next/link";
 import profilePic from "../../public/images/profile/developer-pic-1.png";
 import AnimatedText from "@/components/AnimatedText";
 import { LinkArrow } from "@/components/Icons";
-import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
+
 export default function Home() {
   return (
     <>
       <Head>
         <title>Abinand P</title>
       </Head>
-      <main className="flex items-center text-dark w-full min-h-screen ">
-        <Layout className="pt-0">
+      <main className="flex items-center text-dark w-full min-h-screen
+      dark:text-light ">
+        <Layout className="">
           <div className="flex items-center justify-between w-full">
             <div className="w-1/2">
               <Image
@@ -52,7 +53,8 @@ export default function Home() {
                   className="flex items-center text-light
                 bg-dark p-2.5 px-6 rounded-lg text-lg font-semibold
                 hover:bg-light hover:text-dark
-                border-2 border-solid border-transparent hover:border-dark
+                border-2 border-solid border-transparent
+                dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light  hover:dark:border-light hover:border-dark
                 "
                   download={true}
                 >
@@ -63,7 +65,7 @@ export default function Home() {
                   href='mailto:abinand0911@gmail.com target={"_blank'
                   className="ml-4 text-lg
                 font-medium capitalize
-                text-dark underline "
+                text-dark underline  dark:text-light"
                 >
                   contact
                 </Link>

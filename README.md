@@ -23,5 +23,8 @@ Still I have managed to create the portofilo which is compatible with the screen
     <img src="https://github.com/Abiji-2020/Portfolio/assets/145255212/1211e05d-3349-47ac-bc8a-580223b5b302" />
 </div>
 
+# Developement 
+
+Now currently working on making the design responsive in the second branch `dev1`
 
 

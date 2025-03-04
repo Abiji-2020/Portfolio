@@ -119,7 +119,7 @@ bg-light p-4  dark:bg-dark dark:border-light xl:col-span-4"
               <Image
                 src={ProfilePic}
                 alt="Abinand P"
-                className="w-full h-auto rounded-2xl "
+                className="w-full h-auto rounded-2xl sm:w-0"
                 priority = {true}
                 sizes= '(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw'
               />

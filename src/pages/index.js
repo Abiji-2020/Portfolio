@@ -13,14 +13,14 @@ export default function Home() {
         <title>Abinand P</title>
       </Head>
       <main className="flex items-center text-dark w-full min-h-screen
-      dark:text-light ">
-        <Layout className=" ">
+      dark:text-light dark:bg-dark ">
+        <Layout className="xs:py-72 ">
           <div className="flex items-center justify-between w-full lg:flex-col">
             <div className="w-1/2 md:w-full md:!-mt-12 -mt-12">
               <Image
                 src={profilePic}
                 alt="Abinand P"
-                className="w-[80%] h-auto lg:hidden md:inline-block md:w-full "
+                className="w-[80%] h-auto lg:hidden md:inline-block md:w-full xs:hidden "
                 priority={true}
                 sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 50vw"
               />
@@ -33,10 +33,10 @@ export default function Home() {
             >
               <AnimatedText
                 text="Turning Vision Into Reality With Code And Design"
-                className="!text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl  md:!text-5xl sm:!text-3xl lg:w-full
+                className="!text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl  md:!text-5xl sm:!text-3xl lg:w-full xs:!text-4xl
               !text-left"
               />
-              <p className="my-4 text-base font-medium md:text-small sm:text-xs">
+              <p className="my-4 text-base font-medium md:text-small sm:text-xs xs:text-sm">
                 As a skilled full-stack developer, I am dedicated to turning
                 ideas into innovative web applications. Explore my latest
                 projects and articles, showcasing my expertise in web
@@ -45,8 +45,8 @@ export default function Home() {
 
               <div
                 className="flex
-              items-center
-              self-start lg:self-center
+              items-center 
+              self-start lg:self-center xs:col-span-1 xs:flex-col lg:flex-row 
               mt-2"
               >
                 <Link
@@ -54,8 +54,8 @@ export default function Home() {
                   target={"_blank"}
                   className="flex items-center text-light
                 bg-dark p-2.5 px-6 rounded-lg text-lg font-semibold
-                hover:bg-light hover:text-dark
-                border-2 border-solid border-transparent
+                hover:bg-light hover:text-dark xs:inline-flex
+                border-2 border-solid border-transparent md:mx-7 lg:md:mx-7
                 dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light  hover:dark:border-light hover:border-dark
                 "
                   download={true}
@@ -63,11 +63,15 @@ export default function Home() {
                   Resume
                   <LinkArrow className="ml-1 w-6" />
                 </Link>
+                <br></br>
                 <Link
                   href='mailto:abinand0911@gmail.com target={"_blank'
-                  className="ml-4 text-lg
-                font-medium capitalize
-                text-dark underline  dark:text-light"
+                  className="flex items-center text-light
+                  bg-dark p-2.5 px-6 rounded-lg text-lg font-semibold
+                  hover:bg-light hover:text-dark xs:inline-flex
+                  border-2 border-solid border-transparent lg:mx-7
+                  dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light  hover:dark:border-light hover:border-dark
+                  "
                 >
                   contact
                 </Link>

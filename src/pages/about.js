@@ -38,7 +38,7 @@ const about = () => {
         <title> Abinand | About</title>
         <meta
           name="description"
-          content="This a webpage about myself. Abinand P which consists of my projects and all other detials of me "
+          content="This a webpage about myself, Abinand P. Which consists of my projects and all other detials of me "
         ></meta>
       </Head>
       <main
@@ -64,17 +64,15 @@ const about = () => {
               <p className="font-medium text-justify  ">
                 🌟 Hi, I'm Abinand P, aspiring computer science engineering
                 student with an unwavering passion for technology, an aspiring
-                interest in DevOps, and a commitment to open source
-                contributions with the indulgence in the thought process of
-                developing softwares and web development based on the java
-                springboot, MERN Stack, and Next.js.
+                interest in Backend development along with DevOps, and a commitment to open source
+                contributions in repositories such as Daytona, Permit.io and Cyclops. Also in solving bounties in Algora. 
               </p>
 
               <p className="font-medium my-4 text-justify  ">
                 <span className="font-bold text-dark/80">
                   🌐 Tech Enthusiast:
                 </span>{" "}
-                Currently navigating my second year in computer science and
+                Currently navigating my pre-final year in computer science and
                 engineering, I'm building a solid foundation in programming and
                 exploring the vast landscape of technology. As the computer
                 Science is a vast domain, I am currently selecting myself the

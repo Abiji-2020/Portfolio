@@ -3,7 +3,7 @@
 In this Portolio Project, I have created a MultiPage webstite along with the two themes `dark` and `light` mode. 
 <br>
 This project is a little bit of complex for me as to showcase the things and the desigin was the hardest part as, I am not great of a designer. <br>
-Still I have managed to create the portofilo which is compatible with the screens of the laptop and the desktop. Aiming to streamline this project more.
+Still I have managed to create the portofilo which is compatible with the screens of the laptop and the desktop. Aiming to streamline this project more along with the expertiese in golag and C++.
 
 ## Pages
 - Home Page

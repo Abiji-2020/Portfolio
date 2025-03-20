@@ -93,7 +93,7 @@ const projects = () => {
       <title> Abinand | Projects</title>
       <meta
         name="description"
-        content="This a webpage about myself. Abinand P which consists of my projects and all other detials of me "
+        content="Consists of the projects done by Abinand P. Github Link: www.github.com/Abiji-2020"
       ></meta>
     </Head>
 

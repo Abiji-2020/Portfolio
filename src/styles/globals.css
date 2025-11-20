@@ -1,3 +1,220 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+
+  /* Neumorphic Light Mode Colors */
+  --background: #e0e5ec;
+  --foreground: #4a5568;
+  --card: #e0e5ec;
+  --card-foreground: #4a5568;
+  --popover: #e0e5ec;
+  --popover-foreground: #4a5568;
+  --primary: #6b7280;
+  --primary-foreground: #ffffff;
+  --secondary: #d1d5db;
+  --secondary-foreground: #4a5568;
+  --muted: #e5e7eb;
+  --muted-foreground: #6b7280;
+  --accent: #cbd5e1;
+  --accent-foreground: #374151;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.06);
+  --input: transparent;
+  --input-background: #e0e5ec;
+  --switch-background: #d1d5db;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #9ca3af;
+
+  /* Neumorphic Shadow Variables */
+  --shadow-light: #ffffff;
+  --shadow-dark: #c8d0db;
+  --shadow-sm:
+    3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light);
+  --shadow-md:
+    5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
+  --shadow-lg:
+    8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+  --shadow-inset:
+    inset 3px 3px 6px var(--shadow-dark),
+    inset -3px -3px 6px var(--shadow-light);
+  --shadow-inset-md:
+    inset 4px 4px 8px var(--shadow-dark),
+    inset -4px -4px 8px var(--shadow-light);
+
+  --radius: 1rem;
+}
+
+.dark {
+  /* Neumorphic Dark Mode Colors */
+  --background: #2d3748;
+  --foreground: #e2e8f0;
+  --card: #2d3748;
+  --card-foreground: #e2e8f0;
+  --popover: #2d3748;
+  --popover-foreground: #e2e8f0;
+  --primary: #94a3b8;
+  --primary-foreground: #1a202c;
+  --secondary: #374151;
+  --secondary-foreground: #e2e8f0;
+  --muted: #374151;
+  --muted-foreground: #94a3b8;
+  --accent: #475569;
+  --accent-foreground: #e2e8f0;
+  --destructive: #f87171;
+  --destructive-foreground: #1a202c;
+  --border: rgba(255, 255, 255, 0.06);
+  --input: #2d3748;
+  --ring: #64748b;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+
+  /* Neumorphic Dark Mode Shadow Variables */
+  --shadow-light: #3a4556;
+  --shadow-dark: #1f2937;
+  --shadow-sm:
+    4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+  --shadow-md:
+    8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+  --shadow-lg:
+    12px 12px 24px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
+  --shadow-inset:
+    inset 4px 4px 8px var(--shadow-dark),
+    inset -4px -4px 8px var(--shadow-light);
+  --shadow-inset-md:
+    inset 6px 6px 12px var(--shadow-dark),
+    inset -6px -6px 12px var(--shadow-light);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Neumorphic utility classes
+ */
+@layer utilities {
+  .neuro-sm {
+    box-shadow: var(--shadow-sm);
+  }
+
+  .neuro-md {
+    box-shadow: var(--shadow-md);
+  }
+
+  .neuro-lg {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .neuro-inset {
+    box-shadow: var(--shadow-inset);
+  }
+
+  .neuro-inset-md {
+    box-shadow: var(--shadow-inset-md);
+  }
+
+  .neuro-pressed {
+    box-shadow: var(--shadow-inset);
+    transform: scale(0.98);
+  }
+
+  .neuro-raised {
+    box-shadow: var(--shadow-md);
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
